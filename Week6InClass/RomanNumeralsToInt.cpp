@@ -12,10 +12,14 @@ int RomanNumeralsToInt(std::string& input)
     
     if (prev == 'I' && n == 'V') {
       out += 3;
-      break;
     } else if (prev == 'I' && n == 'X') {
       out += 8;
-      break;
+    } else if (prev == 'X' && n == 'C') {
+      out += 80;
+    } else if (prev == 'C' && n == 'M') {
+      out += 800;
+    } else if (prev == 'C' && n == 'D') {
+      out += 300;
     } else if (n == 'M') {
       out += 1000;
     } else if (n == 'D') {
@@ -51,4 +55,7 @@ int main()
 
   std::string test3 = "IV";
   std::cout << RomanNumeralsToInt(test3) << std::endl;
+
+  std::string test4 = "MMMMCMXCIX";
+  std::cout << RomanNumeralsToInt(test4) << std::endl;
 }
