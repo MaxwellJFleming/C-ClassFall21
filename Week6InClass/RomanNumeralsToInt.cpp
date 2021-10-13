@@ -34,6 +34,8 @@ int RomanNumeralsToInt(std::string& input)
       out += 5;
     } else if (n == 'I') {
       out += 1;
+    } else {
+      return -1;
     }
     
     prev = n;
@@ -58,4 +60,7 @@ int main()
 
   std::string test4 = "MMMMCMXCIX";
   std::cout << RomanNumeralsToInt(test4) << std::endl;
+
+  std::string test5 = "Not at all roman numerals";
+  std::cout << RomanNumeralsToInt(test5) << std::endl;
 }
