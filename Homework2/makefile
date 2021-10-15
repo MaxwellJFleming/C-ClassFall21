@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -I. -Wall -Wextra -Werror -O2 -pedantic -std=c99
+CFLAGS = -I. -Wall -Wextra  -O2 -pedantic -std=c99
 DEPS = logic.h
 OBJ = logic.o main.o
 
